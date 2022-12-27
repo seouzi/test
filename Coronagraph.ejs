@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css.css" typte="text/css" />
+</head>
+<body>
+    <header id="stat-header" className="stat-header">
+        <div className="container">
+            <h1>코로나19 현황 그래프</h1>
+        </div>
+      </header>
+        <div className="container">
+            <div className="stat-row">
+                <h2>글로벌 사망자 현황</h2>
+                <iframe src="https://ourworldindata.org/grapher/daily-covid-deaths-region" loading="lazy" width= "100%" height= "600px" border= "0" margin-top= "15px"></iframe>
+            </div>
+            <div className="stat-row">
+                <h2>한국의 누적 코로나확진자와 사망자 수</h2>
+                <iframe src="https://ourworldindata.org/grapher/cumulative-deaths-and-cases-covid-19?country=~KOR" loading="lazy" width= "100%" height= "600px" border= "0" margin-top= "15px"></iframe>
+            </div>
+        </div>
+</body>
+</html>

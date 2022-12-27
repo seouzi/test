@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css.css" typte="text/css" />
+    <title>메인 ADHD</title>
+   
+</head>
+<body>
+    <h1 style="font-size:50px; text-align: center;">ADHD 자가진단 사이트</h1>
+    <input type="checkbox" id="menuicon">
+    <%- include('adhd.html') %>
+    <p>1번 부터 4번 까지는 1점씩이고 5번 부터 7번 까지는 5점씩입니다.</p>
+    <p>1. 발열이 있나요? (체온 37.5℃ 이상)
+        *(단, 코로나19와 관계없이 평소의 기저질환으로 인한 증상이 계속되는 경우는 제외)</p>
+    <p>2. 기침이 있나요?
+        *(단, 코로나19와 관계없이 평소의 기저질환으로 인한 증상이 계속되는 경우는 제외)
+    </p>
+    <p>3. 피로가 있나요?
+        *(단, 코로나19와 관계없이 다른 이유로 인한 증상이 계속되는 경우는 제외)
+    </p>
+    <p>4. 맛이나 냄새의 상실이 있나요?</p>
+    <p>5. 호흡 곤란 또는 숨 가쁨이 있나요?</p>
+    <p>6. 언어 또는 운동 장애, 착란 증상이 있나요?</p>
+    <p>7. 호흡 곤란이 있나요?</p>
+    
+    <button id="a">결과</button>
+    <script>
+    
+        document.getElementById("a").addEventListener('click', function aa(){
+        let name=prompt("총 개수를 입력해주세요.");
+        if(name>4){
+            alert("당신은 중증환자입니다.");
+        }else if(name>=1){
+            alert("당신은 경증환자입니다.");
+        }else{
+            alert("당신은 환자가 아닙니다.")
+        }}); 
+   </script>
+</body>
+</html>

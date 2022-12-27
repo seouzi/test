@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/2.css" typte="text/css" />
+	<link rel="stylesheet" href="/public/css.css" typte="text/css" />
+    <title>ADHD 자가진단</title>
+</head>
+<body>
+	<h1 style="font-size:50px; text-align: center;">ADHD 자가진단 사이트</h1>
+    <input type="checkbox" id="menuicon">
+	<%- include('adhd.html') %>
+	<p>
+        <strong>＊자가진단 검사자 :</strong>
+        <input type="radio" name="job" id="radioA0" value="1" checked="checked"  /><label for="radioA0"> 부모</label>
+        <input type="radio" name="job" id="radioB0" value="2"  /><label for="radioB0"> 교사</label>
+    </p>
+    <form action="/adhdadd" method="post" oninput="result.value=parseInt(q01.value)+parseInt(q02.value)+parseInt(q03.value)
+    +parseInt(q04.value)+parseInt(q05.value)+parseInt(q06.value)+parseInt(q07.value)
+    +parseInt(q08.value)+parseInt(q09.value)+parseInt(q10.value)">
+
+	<div>
+					<div>
+						<p>다음 문항을 읽고 해당 사항을 선택하여 주시기 바랍니다.</p>
+					</div>
+				</div>
+				<fieldset>
+				<legend>ADHD 진단항목</legend>					
+					<div class="sd">
+						<ul>
+							<li>
+								<span class="sd_number">1.</span>
+								<div class="sd_question">
+									<p>차분하지 못하고 활동적이다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q01" id="q01_01" value="0" checked="checked"><label for="q01_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q01" id="q01_02" value="1"><label for="q01_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q01" id="q01_03" value="2"><label for="q01_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q01" id="q01_04" value="3"><label for="q01_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">2.</span>
+								<div class="sd_question">
+									<p>쉽사리 흥분하고 방해가 된다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q02" id="q02_01" value="0" checked="checked"><label for="q02_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q02" id="q02_02" value="1"><label for="q02_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q02" id="q02_03" value="2"><label for="q02_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q02" id="q02_04" value="3"><label for="q02_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">3.</span>
+								<div class="sd_question">
+									<p>다른 아이들에게 방해가 된다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q03" id="q03_01" value="0" checked="checked"><label for="q03_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q03" id="q03_02" value="1"><label for="q03_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q03" id="q03_03" value="2"><label for="q03_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q03" id="q03_04" value="3"><label for="q03_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">4.</span>
+								<div class="sd_question">
+									<p>한번 시작한 일을 끝내지 못한다 주의 집중시간이 짧다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q04" id="q04_01" value="0" checked="checked"><label for="q04_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q04" id="q04_02" value="1"><label for="q04_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q04" id="q04_03" value="2"><label for="q04_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q04" id="q04_04" value="3"><label for="q04_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">5.</span>
+								<div class="sd_question">
+									<p>늘 안절부절 못한다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q05" id="q05_01" value="0" checked="checked"><label for="q05_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q05" id="q05_02" value="1"><label for="q05_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q05" id="q05_03" value="2"><label for="q05_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q05" id="q05_04" value="3"><label for="q05_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">6.</span>
+								<div class="sd_question">
+									<p>주의력이 없고 쉽게 주의분산이 된다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q06" id="q06_01" value="0" checked="checked"><label for="q06_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q06" id="q06_02" value="1"><label for="q06_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q06" id="q06_03" value="2"><label for="q06_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q06" id="q06_04" value="3"><label for="q06_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">7.</span>
+								<div class="sd_question">
+									<p>요구하는 것이 있으면 금방 들어주어야 한다 쉽게 좌절이 된다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q07" id="q07_01" value="0" checked="checked"><label for="q07_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q07" id="q07_02" value="1"><label for="q07_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q07" id="q07_03" value="2"><label for="q07_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q07" id="q07_04" value="3"><label for="q07_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">8.</span>
+								<div class="sd_question">
+									<p>자주 또는 쉽게 울어 버린다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q08" id="q08_01" value="0" checked="checked"><label for="q08_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q08" id="q08_02" value="1"><label for="q08_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q08" id="q08_03" value="2"><label for="q08_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q08" id="q08_04" value="3"><label for="q08_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">9.</span>
+								<div class="sd_question">
+									<p>금방 기분이 확 변한다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q09" id="q09_01" value="0" checked="checked"><label for="q09_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q09" id="q09_02" value="1"><label for="q09_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q09" id="q09_03" value="2"><label for="q09_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q09" id="q09_04" value="3"><label for="q09_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>						
+							<li>
+								<span class="sd_number">10.</span>
+								<div class="sd_question">
+									<p>화나 분을 터뜨리거나 감정이 변하기 쉽고 행동을 예측하기 어렵다.</p>
+								</div>
+								<div class="sd_category cnt4-2-1">
+									<ul>
+										<li><input type="radio" name="q10" id="q10_01" value="0" checked="checked"><label for="q10_01">전혀 그렇지 않다.</label></li>
+										<li><input type="radio" name="q10" id="q10_02" value="1"><label for="q10_02">약간 그렇다.</label></li>
+										<li><input type="radio" name="q10" id="q10_03" value="2"><label for="q10_03">대체로 그렇다.</label></li>
+										<li><input type="radio" name="q10" id="q10_04" value="3"><label for="q10_04">매우 그렇다.</label></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</fieldset>
+				<br>총 점수 : <output name="result" for="num" class="btn btn_lg btn_pnt"></output></br>
+				<div class="form-group">
+					<label>이름</label>
+					<input type="text" class="form-control" name="name">
+				  </div>
+				  <div class="form-group">
+					<label>날짜</label>
+					<input type="text" class="form-control" name="date">
+				</div>
+				<button type="submit" class="btn btn-outline-secondary">Submit</button>
+			</form>
+		<h3 class="hb1 h3">주의력 결핍 과잉행동장애(ADHD)자가진단 결과 </h3>
+
+<!-- 결과보기 -->
+<!-- pd2em-rv box1 -->
+
+<table class="t3 tdtac ttvam thtac"style="max-width: none;" border="1" >
+<caption><span class="blind" title="표요약(summary)">불안 자가진단 결과(점수,평가)</span></caption>
+<colgroup><col span="2" style="width:20%;" /><col /></colgroup>
+<thead>
+<tr>
+<th scope="col">평가자</th>
+<th scope="col">점수</th>
+<th scope="col">평가</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row" rowspan="2">부모</th>
+<td>16점 미만</td>
+<td >일상생활에 어려움이 없음</td>
+</tr>
+<tr>
+<td>16점 이상</td>
+<td >아동이 집중력 및 충동성 관련된 문제가 있음(전문가 상담필요)</td>
+</tr>
+<tr>
+<th scope="row" rowspan="2">교사</th>
+<td>17점 미만</td>
+<td>일상생활에 어려움이 없음</td>
+</tr>
+<tr>
+<td>18점 이상</td>
+<td>아동이 집중력 및 충동성 관련된 문제가 있음(전문가 상담필요)</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
